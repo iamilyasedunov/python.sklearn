@@ -19,10 +19,10 @@ y = newsgroups.target
 TF_IDА = TfidfVectorizer()                               #строим числовое представление для текстовых данных
 
 
-X_scaled = TF_IDА.fit_transform(X)                       #с помощью метода fit_transform() оуществляем преобразование тестовой выборки
+X_scaled = TF_IDF.fit_transform(X)                       #с помощью метода fit_transform() оуществляем преобразование тестовой выборки
 
 
-feature_mapping = TF_IDА.get_feature_names()             #массив объектов(слов), веса этих объектов находятся в clf.coef_
+feature_mapping = TF_IDF.get_feature_names()             #массив объектов(слов), веса этих объектов находятся в clf.coef_
 
 grid = {'C': np.power(10.0, np.arange(-5, 6))}          #диапазон в котором ищем C
 cv = KFold(n_splits=5, random_state=241)                #кросс-валидация по пяти блокам
