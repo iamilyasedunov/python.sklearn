@@ -41,7 +41,14 @@ recall = metrics.recall_score(y, y_pred)
 print('accuracy = ',accuracy, 
       'precision =  ',precision,
       'recall = ', recall)                              
+                                                        #отнесем заданный текст к одному из двух классов, пример текста: биография Стивена Хокинга
 
+Sample = ['Stephen Hawking (January 8, 1942 to March 14, 2018) was a British scientist, professor and author who performed groundbreaking work in physics and cosmology, and whose books helped to make science accessible to everyone. At age 21, while studying cosmology at the University of Cambridge, he was diagnosed with amyotrophic lateral sclerosis (ALS). Part of his life story was depicted in the 2014 film The Theory of Everything.']
+X_new = [element.lower() for element in Sample]
+X_new_tfidf = TF_IDF.transform(X_new)
+predicted = clf.predict(X_new_tfidf)
+
+print(predicted)
 
 #далее: извлекаем 10 слов с наибольшим абсолютным значением веса
 #сортируем их в лексиграфическом порядке
