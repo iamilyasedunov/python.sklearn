@@ -1,3 +1,7 @@
+#Ссылка на .csv файл -
+#https://d3c33hcgiwev3.cloudfront.net/_f048004989fa1185c1d03f0eb2a8ad0c_data-logistic.csv?Expires=1535328000&Signature=Imnjrl5HWEnmM4rXfIsM3Hq9tMCzlNzTGvEKW319VA71B1oxbaIZDm4-yy7R-A5eF0sxNUbFOemGMmHKrT9fz8Ewg7swf5Gn9S2JW2I2oVgqqd8v3qWCX4d-Ueq3NIBZzPoPfa4GbQUK~9hQ8P~RnjU5GvUKQrxZWLpTqmbEAZE_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A
+
+
 import pandas as pd
 import numpy as np
 from scipy.spatial import distance 
@@ -55,3 +59,4 @@ for i in range(l):
 
 print(roc_auc_score(y, y_noreg))
 print(roc_auc_score(y, y_reg))
+
